@@ -29,20 +29,13 @@ export type RequestError = {
   message: string,
 };
 
-export type UserTicket = {
-    id: number,
-    status: string, //RESERVED | PAID
-    ticketTypeId: number,
-    enrollmentId: number,
-    TicketType: {
-      id: number,
+export type PayInfo = {
+    ticketId: number,
+    cardData: {
+      issuer: string,
+      number: string,
       name: string,
-      price: number,
-      isRemote: boolean,
-      includesHotel: boolean,
-      createdAt: Date,
-      updatedAt: Date,
-    },
-    createdAt: Date,
-    updatedAt: Date,
+      expirationDate: string,
+      cvv: string,
+    }
   }
